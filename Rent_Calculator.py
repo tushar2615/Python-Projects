@@ -6,4 +6,4 @@ person=int(input("Enter no. of people: "))
 
 sum=(rent+food+(units*charge))//person
 
-print(f"Each person have to pay {sum} amount.")
+print(f"Each person have to pay {int(sum)} amount.")
