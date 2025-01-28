@@ -1,0 +1,32 @@
+import random
+
+Answer=random.randrange(0,90)
+chance=0
+name=input("Enter your name: ")
+print("Rules of Game:")
+print("1. The number should lies between 0 to 90.")
+print("2. You got only 5 chances to guess the no.")
+
+
+while chance < 5:
+    user_input=int(input("Enter a no: "))
+    if Answer == user_input:
+        print("Hurray! You won.",name)
+
+    elif Answer > user_input:
+        if Answer > 2*user_input:
+            print("Your guess is too low,",name)
+        else:
+            print("Your guess is low,",name)
+
+    else:
+        if Answer > 2*user_input:
+            print("Your guess is too high,",name)
+        else:
+            print("Your guess is high,",name)
+
+    chance+=1
+
+else:
+    print(name,"You loose the Game")
+    print("The correct answer is: ",Answer)
